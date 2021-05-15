@@ -9,13 +9,10 @@ for i in range(n):
         for j in range(i-k,i+k+1):
             if j < 0 or j > n:
                 continue
-            if r[j] == "H":
-                cnt += 1
-                r[j] = "A"
-                break
             elif r[j] == "H":
                 cnt += 1
                 r[j] = "A"
                 break
+    
 
 print(cnt)
