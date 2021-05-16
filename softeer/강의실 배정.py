@@ -2,20 +2,28 @@ import sys
 import heapq
 
 n = int(sys.stdin.readline())
-i=[]
+heap = []
+
 for _ in range(n):
-    a, b = map(int,sys.stdin.readline().split())
-    heapq.heappush(i, (b, a))
+    s, f = map(int,sys.stdin.readline().split())
 
-c=0
-count =0
-while i:
-    a, b =heapq.heappop(i)
+    # f 기준으로 (f, s)가 heap 리스트 안에 들어간다.
+    heapq.heappush(heap, (f, s))
 
-    if b >= c:
-        count +=1
-        c=a
+# 초기값
+v = 0
+# 강의 수
+count = 0
+
+# heap 리스트가 0이 될때까지 반복한다.
+while heap:
+    # 가장 작은 원소를 삭제후 s, f에 넣는다.
+    s, f = heapq.heappop(heap)
+
+    # 종료시간이 초기값(시작시간)보다 크거나 같으면 카운터해준다.
+    # 다음 기준값은 시작시간으로 초기화해준다.
+    if f >= v:
+        count += 1
+        v = s
 
 print(count)
-
-
