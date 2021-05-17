@@ -3,7 +3,6 @@ import sys
 
 # 지수를 재귀적으로 나눈다.
 def f(x, y):
-    print(x, y)
     if y == 1:
         return x
 
