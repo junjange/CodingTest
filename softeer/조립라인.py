@@ -28,7 +28,6 @@ for i in range(n-1):
     work_a = time_a
     work_b = time_b
 
-    print(time_a, time_b)
 # 각각의 마지막 작업장 시간을 각 라인에서 총 걸린 시간에 더해준다.
 time_a += finish[0]
 time_b += finish[1]
