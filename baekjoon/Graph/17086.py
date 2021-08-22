@@ -11,7 +11,6 @@ def bfs():
     while queue:
 
         x, y = queue.popleft()
-        print(queue, x, y)
         # 상/하/좌/우/대각선 탐색
         for i in range(8):
             a = x + dx[i]
