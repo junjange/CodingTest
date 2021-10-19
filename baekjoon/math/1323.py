@@ -18,13 +18,13 @@ while True:
         # 같은 수를 더하는 연산
         temp = str(temp) + str(n)
 
-        # 나머지가 이전에 나온 나머지 리스트 집합에 포함되면
+        # 나누어야 하는 수가 집합에 포함되어 있으면
         # 무한 루트이므로 -1 출력
         if temp in paper:
             cnt = -1
             break
 
-        # 나머지 리스트 집합에 나머지를 추가
+        # 나머지 리스트 집합에 나누어야 하는 수를 추가
         paper.add(temp)
 
 print(cnt)
