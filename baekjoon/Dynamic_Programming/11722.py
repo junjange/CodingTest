@@ -3,7 +3,7 @@ import sys
 
 n = int(sys.stdin.readline())
 m = list(map(int, sys.stdin.readline().split()))
-# m.reverse() # 리스트를 거꾸러 변환해 가장 긴 증가하는 부분 수열의 길이를 구하는 방법을 사용
+m.reverse() # 리스트를 거꾸러 변환해 가장 긴 증가하는 부분 수열의 길이를 구하는 방법을 사용
 dp = [1] * n
 
 # 반복문을 통해 수열이 증가하는지 확인
