@@ -2,7 +2,7 @@ import sys
 
 n = int(sys.stdin.readline())
 arr = [] # 단축기로 지정된 알파벳
-flag = False # 현재 단어의 알파벳을 단축기로 사용했는지 유무
+
 
 # 반복문을 통해 모든 단어를 확인
 for _ in range(n):
@@ -19,6 +19,7 @@ for _ in range(n):
     
     # 반복문이 break를 통과하지 않았다면
     else:
+        flag = False # 현재 단어의 알파벳을 단축기로 사용했는지 유무
         # 3번의 방법을 수행 
         for j in range(len(word)):
             # 반복문을 통해 모든 단어의 알파벳을 확인
